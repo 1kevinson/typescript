@@ -1,19 +1,16 @@
 /** @format */
 
 enum Role {
-  
+  ADMIN,
+  READ_ONLY,
+  AUTHOR
 }
 
-const person: {
-  name: string,
-  age: number,
-  hobbies: string[],
-  role : [number,string]
-} = {
+const person = {
   name: 'Kevin',
   age: 30,
   hobbies: ['sport', 'programming'],
-  role: [2 , 'author']
+  role: Role.ADMIN
 }
  
 person.role.push('admin');
