@@ -3,16 +3,24 @@
 enum Role {
   ADMIN,
   READ_ONLY,
-  AUTHOR
+  AUTHOR,
+  OWNER
 }
 
-const person = {
+type Person = {
+  name: string,
+  age: number,
+  hobbies: string[],
+  role: Role
+}
+
+const person : Person = {
   name: 'Kevin',
   age: 30,
   hobbies: ['sport', 'programming'],
   role: Role.ADMIN
 }
  
-person.role.push('admin');
+person.hobbies.push('reading');
 
 console.log(person);
