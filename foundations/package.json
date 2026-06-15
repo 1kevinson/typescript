@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "exec ts": "npx ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
