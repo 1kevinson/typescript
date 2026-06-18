@@ -1,12 +1,14 @@
 {
+  "type": "module",
   "scripts": {
-    "exec ts": "npx ts-node src/index.ts"
+    "test": "vitest"
   },
   "dependencies": {
     "ts-node": "^10.9.2",
     "tsx": "^4.22.4"
   },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
   }
 }

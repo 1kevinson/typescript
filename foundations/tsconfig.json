@@ -2,30 +2,33 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "rootDir": "./src", // Dossier racine des fichiers sources TypeScript
+    "outDir": "./dist", // Dossier de sortie pour les fichiers compilés JavaScript
 
     // Environment Settings
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
+    "module": "nodenext", // Système de modules utilisé (compatible Node.js avec ESM natif)
+    "target": "esnext", // Version de JavaScript cible pour la compilation (la plus récente)
+    "types": [], // Liste des packages @types à inclure (vide = aucun chargé automatiquement)
 
     // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "sourceMap": true, // Génère des fichiers .map pour relier le JS compilé au TS source (débogage)
+    "declaration": true, // Génère des fichiers .d.ts avec les types pour les consommateurs de la lib
+    "declarationMap": true, // Génère des .d.ts.map pour naviguer vers le source TS depuis les .d.ts
 
     // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true, // Ajoute undefined au type retourné lors d'un accès par index (arr[i])
+    "exactOptionalPropertyTypes": true, // Distingue une prop optionnelle absente d'une prop à valeur undefined
+
+    // Warning Unused Typechecking Options
+    "noUnusedLocals": true, // Erreur si une variable locale est déclarée mais jamais utilisée
+    "noUnusedParameters": true, // Erreur si un paramètre de fonction est déclaré mais jamais utilisé
 
     // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    "strict": true, // Active toutes les vérifications de type strictes (null, any implicite, etc.)
+    "verbatimModuleSyntax": true, // Oblige à écrire `import type` pour les imports purement de type
+    "isolatedModules": true, // Chaque fichier doit être compilable indépendamment (requis pour esbuild/swc)
+    "noUncheckedSideEffectImports": true, // Erreur sur les imports sans bindings si le module n'est pas déclaré
+    "moduleDetection": "force", // Traite tous les fichiers comme des modules ES (même sans import/export)
+    "skipLibCheck": true // Ignore les erreurs de type dans les fichiers .d.ts des dépendances
   }
 }
