@@ -31,7 +31,7 @@ if (
   typeof rawApiResponse === "object" &&
   "lastlogin" in rawApiResponse
 ) {
-  console.log("derniere connexion " + rawApiResponse.lastlogin);
+  console.log("Derniere connexion " + rawApiResponse.lastlogin);
 }
 
 // =========================
